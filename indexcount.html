@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<html>
+    <head>
+        <title>Webserver exercise</title>
+
+    </head>
+    <body>
+
+        <p>   
+            <h3>
+                This is Thora's webserver testing thing
+            </h3>
+        </p>
+        <p>   
+            Server views so far:
+        </p>
+        <p id="count">Number goes here</p>
+        <p>   
+
+        </p>
+
+        <script>
+
+fetch("viewcounter.json")
+    .then(response => response.json())
+    .then(data => {
+        let x = data.counter[0]
+        document.getElementById("count").innerHTML = x
+    })
+
+</script>
+
+    </body>
+</html>
